@@ -1,0 +1,120 @@
+html {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-items: stretch;
+    align-items: stretch;
+    font-size: 16px;
+    font-family: "Tiny5", Arial, Helvetica, sans-serif;
+}
+
+* {
+    font-family: inherit;
+}
+
+body {
+    background-color: var(--colorA-lighter);
+    margin: 0px;
+    cursor: url("/assets/v2/cropped/Cursor_Normal_x4.png") 4 4, default;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+button {
+    cursor: url("/assets/v2/cropped/Cursor_Pointer_x4.png") 4 4, pointer;
+    height: fit-content;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin: 16px;
+}
+
+::selection {
+    background-color: var(--colorA-darker);
+    color: var(--colorA-lighter);
+}
+
+button.A {
+    border-image-slice: 16 8 8 8 fill;
+    border-image-source: url("/assets/v2/cropped/Button_A_x4.png");
+    border-width: 16px 8px 8px 8px;
+    border-style: solid;
+    padding: 8px 64px;
+    box-sizing: content-box;
+    display: grid;
+    place-items: center;
+}
+
+button.A:active {
+    border-image-source: url("/assets/v2/cropped/Button_B_x4.png");
+}
+
+
+img.icon {
+    display: inline-block;
+}
+
+.cast-shadow {
+    filter: drop-shadow(32px 32px 0px #00000088);
+}
+
+div.terrain {
+    width: 384px;
+    height: 384px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-image-slice: 64 64 64 64 fill;
+    border-image-source: url("/assets/v2/cropped/Wall_Full_x4.png");
+    border-width: 64px 64px 64px 64px;
+    border-style: solid;
+    position: relative;
+    padding: 32px;
+    padding-bottom: 64px;
+}
+
+div.terrain::before {
+    content: "";
+    width: 100vw;
+    border-image-slice: 64 16 64 0;
+    border-image-source: url("/assets/v2/cropped/Wall_ExitFull_x4.png");
+    border-width: 64px 16px 64px 0px;
+    border-style: solid;
+    height: 64px;
+    background-color: var(--lightest);
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    transform: scaleX(-1);
+}
+
+.button-pusher {
+    display: flex;
+    align-items: start;
+    overflow: visible;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 16px;
+}
+
+.align-left {
+    align-self: start;
+}
