@@ -1,0 +1,15 @@
+.apply-palette {
+    --darkest: #010026;
+    --colorA-darker: #28055c;
+    --colorA-dark: #520d7a;
+    --colorA: #8624a6;
+    --colorA-light: #c04bc2;
+    --colorA-lighter: #de85d2;
+    --lightest: #ffffff;
+    --colorB-darker: #84cee0;
+    --colorB-dark: #4a92c2;
+    --colorB: #2367a6;
+    --colorB-light: #0d3f80;
+    --colorB-lighter: #04175c;
+    --black: #000000;
+}
