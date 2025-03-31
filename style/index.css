@@ -6,6 +6,7 @@ html {
     align-items: stretch;
     font-size: 16px;
     font-family: "Tiny5", Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 * {
@@ -135,6 +136,7 @@ div.terrain::before {
     left: 0px;
     top: 0px;
     transition: 1s ease;
+    will-change: left, top;
 }
 
 .vertical {
@@ -159,7 +161,7 @@ div.terrain::before {
 .vertical[col="6"] { grid-column: 6; }
 
 div.terrain:has(#start:active) #main-block {
-    left: calc(6 * 64px + 50vh);
+    left: calc(6 * 64px + 50vw);
 }
 
 div.terrain img {
